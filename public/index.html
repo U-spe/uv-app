@@ -1,124 +1,145 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-		/>
-		<title>Ultraviolet | Sophisticated Web Proxy</title>
-		<meta
-			name="description"
-			content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!"
-		/>
-		<meta
-			name="keywords"
-			content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked"
-		/>
-		<meta
-			name="theme-color"
-			media="(prefers-color-scheme: dark)"
-			content="#434c5e"
-		/>
-		<meta name="googlebot" content="index, follow, snippet" />
-		<link rel="shortcut icon" content="favicon.ico" />
-		<link rel="stylesheet" href="index.css" />
-		
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<script src="baremux/index.js"></script>
-		<script src="uv/uv.bundle.js"></script>
-		<script src="uv/uv.config.js"></script>
+    <title>rockz | bedrock</title>
+    <meta name="theme-color" content="#090909">
+    <meta name="description" content="rockz — browse freely with bedrock.">
 
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "FAQPage",
-				"mainEntity": [
-					{
-						"@type": "Question",
-						"name": "What is Ultraviolet (Web Proxy)?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "Highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!"
-						}
-					},
-					{
-						"@type": "Question",
-						"name": "How do I unblock sites using Ultraviolet?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "Simply head to an official site featuring Ultraviolet such as Holy Unblocker or Incognito! You can also self-host Ultraviolet on your own web server for maximum privacy."
-						}
-					},
-					{
-						"@type": "Question",
-						"name": "What if Ultraviolet is blocked or not working?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "Join the Titanium Network Discord at discord.gg/unblock!"
-						}
-					}
-				]
-			}
-		</script>
-	</head>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="index.css">
 
-	<body>
-		<div
-			title="Ultraviolet Logo"
-			class="flex-center logo-wrapper header-center"
-		>
-			<img class="logo" src="uv.png" alt="Ultraviolet" />
-			<h1>Ultraviolet | TN</h1>
-		</div>
-		<div class="flex-center desc left-margin">
-			<p>
-				Ultraviolet is highly sophisticated proxy used for evading internet
-				censorship.
-			</p>
-		</div>
+    <!-- Ultraviolet engine -->
+    <script src="baremux/index.js"></script>
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
+</head>
 
-		<form id="uv-form" class="flex-center">
-			<input
-				id="uv-search-engine"
-				value="https://www.google.com/search?q=%s"
-				type="hidden"
-			/>
-			<input id="uv-address" type="text" placeholder="Search the web freely" />
-		</form>
-		<div class="desc left-margin">
-			<p id="uv-error"></p>
-			<pre id="uv-error-code"></pre>
-		</div>
-		<footer>
-			<div>
-				<a
-					title="The TitaniumNetwork GitHub organization"
-					href="https://github.com/titaniumnetwork-dev"
-					>TitaniumNetwork</a
-				>
-				<a title="The TitaniumNetwork Discord" href="https://discord.gg/unblock"
-					>Discord</a
-				>
-				<a
-					title="The TompHTTP GitHub organization"
-					href="https://github.com/tomphttp"
-					>TompHTTP</a
-				>
-				<a
-					title="The official deployment repository for Ultraviolet"
-					href="https://github.com/titaniumnetwork-dev/Ultraviolet-App"
-					>GitHub</a
-				>
-				<a title="License information" href="credits.html">Credits</a>
-			</div>
-			<div>
-				<span>Ultraviolet &copy; TN 2023</span>
-			</div>
-		</footer>
-		<iframe style="display: none" id="uv-frame"></iframe>
-		<script src="register-sw.js"></script>
-		<script src="search.js"></script>
-		<script src="index.js"></script>
-	</body>
+<body class="rockz rockz-uv">
+
+    <main class="landing" id="landing">
+
+        <header class="topbar">
+            <a class="brand" href="/" aria-label="Rockz home">
+                <span class="brand-symbol">r<span>.</span></span>
+                <span class="brand-name">rockz</span>
+            </a>
+
+            <div class="engine-status">
+                <span class="status-dot"></span>
+                <span>ULTRAVIOLET ENGINE</span>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>BEDROCK BROWSER</span>
+            </div>
+
+            <h1>
+                explore<br>
+                <span class="muted">without limits.</span>
+            </h1>
+
+            <p class="description">
+                one search away from wherever you want to go.
+            </p>
+
+            <form id="uv-form" class="search-form" autocomplete="off">
+                <input
+                    id="uv-search-engine"
+                    type="hidden"
+                    value="https://www.google.com/search?q=%s"
+                >
+
+                <span class="search-icon" aria-hidden="true">↗</span>
+
+                <input
+                    id="uv-address"
+                    type="text"
+                    placeholder="Search or enter a URL..."
+                    aria-label="Search or enter a URL"
+                    spellcheck="false"
+                    autocomplete="off"
+                    autocapitalize="off"
+                >
+
+                <button type="submit" class="search-button" aria-label="Go">
+                    <span>GO</span>
+                    <span aria-hidden="true">↗</span>
+                </button>
+            </form>
+
+            <div class="error-area" aria-live="polite">
+                <p id="uv-error"></p>
+                <pre id="uv-error-code"></pre>
+            </div>
+
+            <div class="quick-links">
+                <span class="quick-links-label">QUICK ACCESS</span>
+
+                <button
+                    type="button"
+                    class="quick-link"
+                    data-url="https://www.google.com"
+                >
+                    Google <span>↗</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="quick-link"
+                    data-url="https://www.youtube.com"
+                >
+                    YouTube <span>↗</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="quick-link"
+                    data-url="https://www.wikipedia.org"
+                >
+                    Wikipedia <span>↗</span>
+                </button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span class="footer-brand">BEDROCK <span>///</span> ROCKZ</span>
+            <span class="footer-message">smaller mind for the bigger craft.</span>
+            <span class="footer-version">UV / 01</span>
+        </footer>
+
+    </main>
+
+    <!-- Required by the existing Ultraviolet application -->
+    <iframe
+        id="uv-frame"
+        title="Rockz browser"
+        style="display: none"
+    ></iframe>
+
+    <!-- Keep the original proxy scripts -->
+    <script src="register-sw.js"></script>
+    <script src="search.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+        (() => {
+            const input = document.getElementById("uv-address");
+            const form = document.getElementById("uv-form");
+
+            document.querySelectorAll(".quick-link").forEach((button) => {
+                button.addEventListener("click", () => {
+                    input.value = button.dataset.url;
+                    form.requestSubmit();
+                });
+            });
+        })();
+    </script>
+
+</body>
 </html>
